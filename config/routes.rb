@@ -2,12 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users do
-    member do
-      get 'my_services'
-      get 'my_bookings'
-    end
-  end
+
+  get 'my_services', to: 'pages#my_services'
+  get 'my_bookings', to: 'pages#my_bookings'
+
   resources :services do
     resources :bookings, only:[:new, :create]
   end
