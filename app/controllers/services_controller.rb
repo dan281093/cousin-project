@@ -1,10 +1,11 @@
 class ServicesController < ApplicationController
   def index
     @services = Service.all
+
   end
 
   def show
-    @services = Service.find(params[:id])
+    @service = Service.find(params[:id])
   end
 
   def new
@@ -12,9 +13,10 @@ class ServicesController < ApplicationController
   end
 
   def create
-    @services = Service.new(services_params)
-    if @services.save
-      redirect_to my_services_path
+    @service = Service.new(services_params)
+    @service.user = current_user
+    if @service.save
+      redirect_to service_path(@service)
     else
       render :new
     end
@@ -23,6 +25,6 @@ class ServicesController < ApplicationController
   private
 
   def services_params
-    params.require(:service).permit(:name, :description)
+    params.require(:service).permit(:description)
   end
 end
