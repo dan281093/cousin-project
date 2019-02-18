@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "destroying all services!!!"
 ## Clear all services
 Service.destroy_all
 
+puts "destroying all users!!!"
 ## clear old users
 User.destroy_all
 
@@ -16,24 +18,23 @@ users = [
   { name: 'Adam Black',
     email: 'Adam@test.com',
     password: '123456',
-    address: 'Tel Aviv'
-  },
-
+    address: 'Tel Aviv' },
   {
     name: 'Eve Mendona',
     email: 'eve@test.com',
     password: '123456',
     address: 'Tel Aviv' },
-
-{
+  {
   name: 'Donald Trump',
   email: 'Don@test.com',
   password: '123456',
-  address: 'Tel Aviv' }]
+  address: 'Tel Aviv'
+  }
+]
 
- users.each do |user|
- User.create!(user)
-end
+puts "I am creating users now!"
+  User.create!(users)
+
 adam = User.find_by(name: "Adam Black")
 don = User.find_by(name: "Donald Trump")
 eve = User.find_by(name: "Eve Mendona")
@@ -65,9 +66,9 @@ services =  [
   user_id: adam.id
 }]
 
-services.each do |service|
-  Service.create!(service)
-end
+
+puts "I am creating services now!"
+  Service.create!(services)
 
 gd = Service.find_by(category: 'Goverment Departments')
 forms = Service.find_by(category: 'Forms')
@@ -76,5 +77,6 @@ hd = Service.find_by(category: 'Health and Diet')
 neighborhood = Service.find_by(category: 'Neighborhoods')
 
 #
+puts "done making seeds you bitch"
 
 
