@@ -1,0 +1,25 @@
+
+ <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+          <%= simple_form_for(@service) do |f| %>
+            <%=f.error_notification  %>
+              <div class=“form-group”>
+                <%= f.label "By City" %>
+                <%= f.input :city, label: false%>
+              </div>
+              <div class=“form-group”>
+                <%= f.label "By Price" %>
+                <%= f.input :price, label: false%>
+              </div>
+              <div class=“form-group”>
+                <%= f.label "By Time" %>
+                <%= f.input :time, label: false%>
+              </div>
+            <%= f.select :category, ["Government Departments", "Forms", "Trips", "Health and Diet", "Neighborhoods"] %>
+            <%= f.submit class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
