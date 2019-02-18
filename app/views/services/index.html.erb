@@ -1,5 +1,44 @@
-<p>Hello</p>
-<!-- delete add services -->
-<%= link_to "Add services", new_service_path, class: "btn btn-success"%>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
 
-<!-- cards -->
+  <h2>Welcome to All services</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <input type="text" class="form-control" placeholder="City">
+      </div>
+      <div class="col-sm">
+        <input type="text" class="form-control" placeholder="Category">
+      </div>
+      <div class="col-sm">
+        <input type="text" class="form-control" placeholder="Time">
+      </div>
+      <div class="col-sm">
+        <input type="text" class="form-control" placeholder="Price Range">
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <!-- cards -->
+
+  <div class="cards">
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#)">
+      Restaurant
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(3)">
+      Ministries
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(3)">
+      Shopping
+    </div>
+
+  </div>
+</body>
