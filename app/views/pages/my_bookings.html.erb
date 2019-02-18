@@ -1,4 +1,9 @@
+<% if @my_bookings = [] %>
+<h1>Your Bookings Summary</h1>
+<h2> You don't have any bookings </h2>
+<% else %>
 <h1>Your Bookings Summary</h1>
 <p>Description: <%= @my_bookings.first.description %></p>
 <p>Time: <%= @my_bookings.first.time %></p>
 <p><%= link_to 'Delete this booking', booking_path(@my_bookings.first), method: :delete, class: "btn btn-primary" %></p>
+<% end %>
