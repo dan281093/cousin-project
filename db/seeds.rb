@@ -70,7 +70,7 @@ services =  [
 puts "I am creating services now!"
   Service.create!(services)
 
-gd = Service.find_by(category: 'Goverment Departments')
+gd = Service.find_by(category: 'Government Departments')
 forms = Service.find_by(category: 'Forms')
 trips = Service.find_by(category: 'Trips')
 hd = Service.find_by(category: 'Health and Diet')
