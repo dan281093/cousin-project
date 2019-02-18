@@ -1,0 +1,28 @@
+
+<p>Selected Service:</p>
+<li>Category: <%= @service.category %></li>
+<li>Descrilition: <%= @service.description %></li>
+<li>Service ID: <%= @service.id %></li>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <%= simple_form_for [@service, @booking] do |b| %>
+        <%= b.label :time, 'Please set a time' %>
+        <%= b.text_field :time %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <%= b.label :description, 'Please enter the description' %>
+      <%= b.text_field :description %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+      <%= b.submit "Create Booking", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
+
