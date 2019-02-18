@@ -14,13 +14,13 @@ users = [
   },
 
   {
-    name: 'Eve'
+    name: 'Eve Mendona'
     , email: 'eve@test.com'
     , password: 123456,
     address: 'Tel Aviv' }
 
 {
-  name: 'Don',
+  name: 'Donald Trump',
   email: 'Don@test.com',
   password: 123456,
   address: 'Tel Aviv' }],
