@@ -41,7 +41,7 @@ eve = User.find_by(name: "Eve Mendona")
 
 services =  [
   {
-    category: 'Goverment Departments',
+    category: 'Government Departments',
   description: 'navigating govermentail services and departments',
    user_id: adam.id
  },
