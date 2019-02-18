@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
     @booking.service = @service
     @booking.user = current_user
     @booking.save!
+    raise
     redirect_to my_bookings_path
 
     # Also set price of the booking!
