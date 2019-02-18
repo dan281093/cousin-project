@@ -43,27 +43,32 @@ services =  [
   {
     category: 'Government Departments',
   description: 'navigating govermentail services and departments',
-   user_id: adam.id
+   user_id: adam.id,
+   name: "burocratic advisor"
  },
 
  { category: 'Forms',
   description: 'Help filling out forms correctly in Hebrew and Arabic form English',
-   user_id: adam.id
+   user_id: adam.id,
+   name: "Form Translator"
  },
 
 {
   category: 'Trips',
   description: 'showing you how to go on day trip in Israel. When and where to go to certain places and what to avoid',
-  user_id: don.id
+  user_id: don.id,
+  name: "Tour Guide"
 },
 
 { category: 'Health and Diet',
   description: 'Helping you find where to get your dietary needs, and where to find medicine and if you need a prescrition.',
-  user_id: don.id
+  user_id: don.id,
+  name: "Health enthusiast"
 },
 { category: 'Neighborhoods',
   description: ' Will show you around the Neighborhood and let you know where who sells what and where the good buys are',
-  user_id: adam.id
+  user_id: adam.id,
+  name: "Local socialite"
 }]
 
 
