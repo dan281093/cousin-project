@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update]
   before_action :set_service, only: [:new, :create]
+
   def index
-    @bookings = Booking.all
   end
 
   def new
