@@ -1,9 +1,10 @@
-<div class="row">
-  <div class="col-xs-6 col-sm-6">
-    <%= @service.name %>
-    <% @services.each do |service| %>
-    <%= service.description %>
-    <% end %>
-  <%= link_to "return to menu", service_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-sm-6">
+      <h2><%= @service.name %></h2>
+      <h3><%= @service.description %></h3>
+      <h3><%= @service.category %> </h3>
+      <%= link_to "return to menu", services_path %>
+    </div>
   </div>
 </div>

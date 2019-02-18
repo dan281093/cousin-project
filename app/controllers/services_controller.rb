@@ -10,6 +10,7 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
+    @service.user = current_user
   end
 
   def create
@@ -25,6 +26,6 @@ class ServicesController < ApplicationController
   private
 
   def services_params
-    params.require(:service).permit(:description)
+    params.require(:service).permit(:name, :description, :category)
   end
 end
