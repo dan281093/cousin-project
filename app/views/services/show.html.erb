@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6 col-sm-6">
-      <h2><%= @service.name %></h2>
-      <h3><%= @service.description %></h3>
-      <h3><%= @service.category %> </h3>
-      <%= link_to "return to menu", services_path %>
+      <h2>Name : <%= @service.name.capitalize %></h2>
+      <h3>Description : <%= @service.description.capitalize %></h3>
+      <h3>Category : <%= @service.category %> </h3>
+      <%= raise %>
+      <h3>Price : <%= @service.price %> $</h3>
+      <h3>Created : <%= @service.created_at.to_time.strftime('%B %e at %l:%M %p') %></h3>
+      <%= link_to "Return to Menu", services_path %>
+      <%= link_to "Make Booking", new_service_booking_path(@service) %>
+
     </div>
   </div>
 </div>
