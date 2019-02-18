@@ -6,8 +6,10 @@
       <h3>Category : <%= @service.category %> </h3>
       <h3>Price : <%= @service.price %> $</h3>
       <h3>Created : <%= @service.created_at.to_time.strftime('%B %e at %l:%M %p') %></h3>
+
       <%= link_to "Return to Menu", services_path %>
       <%= link_to "Make Booking", new_service_booking_path(@service) %>
+      <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-danger"  %>
 
     </div>
   </div>

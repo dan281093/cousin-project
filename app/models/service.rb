@@ -1,6 +1,6 @@
 class Service < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   CATEGORIES = ["Government Departments", "Forms", "Trips", "Health and Diet", "Neighborhoods"]
   validates_inclusion_of :category, in: CATEGORIES
 end

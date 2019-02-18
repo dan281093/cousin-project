@@ -25,20 +25,18 @@
   <br>
   <br>
   <!-- cards -->
-
-  <div class="cards">
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#)">
-      Restaurant
+  <div class="container">
+    <div class="row">
+      <% @services.each do |service| %>
+        <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 10px">
+             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+              <div class="card-content">
+                <%= service.description %>
+                <h3><%= service.name %></h3>
+              </div>
+            </div>
+        </div>
+      <%end %>
     </div>
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(3)">
-      Ministries
-    </div>
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(3)">
-      Shopping
-    </div>
-
   </div>
 </body>
