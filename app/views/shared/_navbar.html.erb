@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-  <%= cl_image_tag 'ipqqzige0zpjibk4sf4a' %>
+  <%= cl_image_tag 'logo.png' %>
 
   <% end %>
 
@@ -27,6 +27,11 @@
             <li>
               <%= link_to my_bookings_path do %>
                 <i class="fa fa-cog"></i>  <%= t(".my_bookings", default: "My Bookings") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to edit_user_registration_path do %>
+                <i class="far fa-user"></i>  <%= t(".my_profiles", default: "My Profile") %>
               <% end %>
             </li>
             <li>
