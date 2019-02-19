@@ -1,14 +1,31 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-sm-6">
-      <h2>Name : <%= @service.name.capitalize %></h2>
-      <h3>Description : <%= @service.description.capitalize %></h3>
-      <h3>Category : <%= @service.category %> </h3>
-      <h3>Price : <%= @service.price %> $</h3>
-      <%= link_to "Return to Menu", services_path %>
-      <%= link_to "Make Booking", new_service_booking_path(@service) %>
-      <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-danger"  %>
-      <%= link_to "Edit", edit_service_path(@service), class: "btn btn-info" %>
+    <div class="service-banner">
+      <div class="service-banner-title">
+        <div class="service-banner-content">
+          <h2>Name : <%= @service.name.capitalize %></h2>
+        </div>
+      </div>
+      <div class="service-banner-image">
+      </div>
+    </div>
+    <div class="description-service">
+      <h3>Description : </h3>
+      <p><%= @service.description.capitalize %></p>
+      <h3>Category :  </h3>
+      <p> <%= @service.category %></p>
+      <h3>Price : </h3>
+      <p> <%= @service.price %> $</p>
+    </div>
+    <div class="button-service">
+      <div class="all-button">
+        <%= link_to "Return to Menu", services_path, class:"btn btn-light"%>
+        <%= link_to "Make Booking", new_service_booking_path(@service), class:"btn btn-light"%>
+        <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-light"  %>
+        <%= link_to "Edit", edit_service_path(@service), class: "btn btn-light" %>
+      </div>
     </div>
   </div>
 </div>

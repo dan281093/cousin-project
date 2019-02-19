@@ -1,0 +1,71 @@
+.description-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #CBBEB3;
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  padding: 25px;
+  color: #757780;
+  margin: 10px;
+
+}
+
+.description-service h3 {
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+  color: #E8EBE4;
+}
+
+.description-service p {
+  padding-top: 26px;
+}
+
+.service-banner-content h2{
+  color: #E8EBE4;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.service-banner {
+  display: flex;
+  align-items: center;
+}
+
+.service-banner-image {
+  background-image: url('https://source.unsplash.com/random');
+  height: 40vh;
+  flex-grow: 1;
+  background-size: cover;
+  margin-left: 10px;
+  background-position: center;
+}
+
+.service-banner-title {
+  background-color: #CBBEB3;
+  flex: 0 0 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+  margin: 10px;
+  color: #757780;
+}
+
+.btn{
+  border-color: #CBBEB3;
+  padding-top: 5px;
+  margin-top: 8px;
+  margin: 8px;
+  color: #757780;
+}
+
+.button-service {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn:hover {
+  border-color: #757780;
+  color: #cd4545;
+}
