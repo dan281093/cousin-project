@@ -3,9 +3,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-
-  <h2>Welcome to All services</h2>
-
+  <br>
+  <h2>Which Service Do you Require?</h2>
+  <br>
   <div class="container">
     <div class="row">
       <div class="col-sm">
@@ -24,18 +24,22 @@
   </div>
   <br>
   <br>
+
   <!-- cards -->
   <div class="container">
     <div class="row">
       <% @services.each do |service| %>
-        <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 10px">
-             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
-              <div class="card-content">
-                <%= service.description %>
-                <h3><%= service.name %></h3>
-              </div>
-            </div>
+      <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 10px">
+        <%= link_to service_path(service) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+          <div class="card-content">
+            <%= service.description %>
+            <h3><%= service.name %></h3>
+          </div>
+          <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
         </div>
+      <% end %>
+      </div>
       <%end %>
     </div>
   </div>

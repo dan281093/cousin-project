@@ -16,7 +16,7 @@ User.destroy_all
 
 users = [
   { name: 'Adam Black',
-    email: 'Adam@test.com',
+    email: 'adam@test.com',
     password: '123456',
     address: 'Tel Aviv',
     remote_photo_url: "https://picsum.photos/200"
@@ -30,7 +30,7 @@ users = [
   },
   {
   name: 'Donald Trump',
-  email: 'Don@test.com',
+  email: 'don@test.com',
   password: '123456',
   address: 'Tel Aviv',
   remote_photo_url: 'https://picsum.photos/200'
@@ -47,9 +47,9 @@ eve = User.find_by(name: "Eve Mendona")
 services =  [
   {
     category: 'Government Departments',
-  description: 'navigating govermentail services and departments',
+  description: 'navigating govermental services and departments',
    user_id: adam.id,
-   name: "burocratic advisor"
+   name: "Burocratic Advisor"
  },
 
  { category: 'Forms',
@@ -60,7 +60,7 @@ services =  [
 
 {
   category: 'Trips',
-  description: 'showing you how to go on day trip in Israel. When and where to go to certain places and what to avoid',
+  description: 'Showing you how to go on day trip in Israel. When and where to go to certain places and what to avoid',
   user_id: don.id,
   name: "Tour Guide"
 },
@@ -68,12 +68,12 @@ services =  [
 { category: 'Health and Diet',
   description: 'Helping you find where to get your dietary needs, and where to find medicine and if you need a prescrition.',
   user_id: don.id,
-  name: "Health enthusiast"
+  name: "Health Enthusiast"
 },
 { category: 'Neighborhoods',
   description: ' Will show you around the Neighborhood and let you know where who sells what and where the good buys are',
   user_id: adam.id,
-  name: "Local socialite"
+  name: "Local Socialite"
 }]
 
 
@@ -85,6 +85,11 @@ forms = Service.find_by(category: 'Forms')
 trips = Service.find_by(category: 'Trips')
 hd = Service.find_by(category: 'Health and Diet')
 neighborhood = Service.find_by(category: 'Neighborhoods')
+
+
+booking1 = Booking.create!(time: 12, description: "I need to extend my visa at the Embassy. Could really need your help with some translations!", service_id: gd.id, user_id: don.id)
+booking2 = Booking.create!(time: 16, description: "Can somebody please help with this rental contract?", service_id: forms.id, user_id: don.id)
+booking3 = Booking.create!(time: 20, description: "I have a work contract in Hebrew, need some help translating and understanding", service_id: forms.id, user_id: don.id)
 
 #
 puts "done making seeds you bitch"
