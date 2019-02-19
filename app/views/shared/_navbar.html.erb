@@ -2,62 +2,67 @@
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
   <%= cl_image_tag"mench_match", height: 5, width: 5 %>
-
   <% end %>
-
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
     <% if user_signed_in? %>
-
-      <!-- Links when logged in -->
-      <%= link_to "Host a Service", new_service_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Book a Service", services_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-      <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= cl_image_tag current_user.photo , class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to my_services_path do %>
-                <i class="fa fa-user"></i> <%= t(".my_services", default: "My Services") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to my_bookings_path do %>
-                <i class="fa fa-cog"></i>  <%= t(".my_bookings", default: "My Bookings") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to edit_user_registration_path do %>
-                <i class="far fa-user"></i>  <%= t(".my_profiles", default: "My Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
+    <!-- Links when logged in -->
+    <%= link_to "Host a Service", new_service_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Book a Service", services_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <!-- Avatar with dropdown menu -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <%= cl_image_tag current_user.photo , class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li>
+            <%= link_to my_services_path do %>
+            <i class="fa fa-user"></i> <%= t(".my_services", default: "My Services") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to my_bookings_path do %>
+            <i class="fa fa-cog"></i>  <%= t(".my_bookings", default: "My Bookings") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to edit_user_registration_path do %>
+            <i class="far fa-user"></i>  <%= t(".my_profiles", default: "My Profile") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+            <% end %>
+          </li>
+        </ul>
       </div>
+    </div>
     <% else %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <!-- Login link (when logged out) -->
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
-
   <!-- Dropdown list appearing on mobile only -->
   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li>
+          <%= link_to my_services_path do %>
+          <i class="fa fa-user"></i> <%= t(".my_services", default: "My Services") %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to my_bookings_path do %>
+          <i class="fa fa-cog"></i>  <%= t(".my_bookings", default: "My Bookings") %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to edit_user_registration_path do %>
+          <i class="far fa-user"></i>  <%= t(".my_profiles", default: "My Profile") %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
 </div>
-
