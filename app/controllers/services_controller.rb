@@ -27,6 +27,16 @@ class ServicesController < ApplicationController
     redirect_to services_path
   end
 
+  def update
+    @service = set_service
+    @service.update(services_params)
+    redirect_to service_path
+  end
+
+  def edit
+    set_service
+  end
+
   private
 
   def set_service
