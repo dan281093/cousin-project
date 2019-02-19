@@ -17,4 +17,8 @@ class PagesController < ApplicationController
   def my_bookings
     @my_bookings = current_user.bookings
   end
+
+  def my_profile
+    @my_profile = current_user
+  end
 end
