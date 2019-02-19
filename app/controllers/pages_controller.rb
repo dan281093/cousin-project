@@ -11,9 +11,10 @@ class PagesController < ApplicationController
     # delete the above
 
     @my_services = Service.where(user_id: current_user.id)
+    ## FIX THIS ABOVE
   end
 
   def my_bookings
-    @my_bookings = Booking.where(user_id: current_user.id)
+    @my_bookings = current_user.bookings
   end
 end

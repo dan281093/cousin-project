@@ -1,3 +1,34 @@
-<h1>Your Services Summary</h1>
-<p>Category: <%= @my_services.first.description %></p>
-<p>Time: <%= @my_services.first.category %></p>
+<h2>The Services you Offer</h2>
+<div class="container">
+  <div class="row">
+    <% @my_services.each do |service| %>
+    <div class="col-xs-6 col-sm-6" style="padding: 10px">
+      <%= link_to service_path(service) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+        <div class="card-content">
+          <%= service.description %>
+          <h3><%= service.category %></h3>
+        </div>
+        <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+      </div>
+      <% end %>
+    </div>
+    <%end %>
+  </div>
+</div>
+<h2>Pending Booking Requests for your Services</h2>
+<div class="container">
+  <div class="row">
+    <% @services.each do |service| %>
+    <% service.bookings.each do |booking| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+      <div class="card-content">
+        <%= booking.description %>
+        <h3><%= booking.service.description %></h3>
+      </div>
+      <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+    </div>
+    <% end %>
+    <%end %>
+  </div>
+</div>
