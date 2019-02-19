@@ -1,8 +1,11 @@
+
 <h2>Book this Service</h2>
-<div class="container" style="text-align: center">
+
+
+
+<div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-6">
-      <!-- CARD BEGINNING -->
+    <div class="col-xs-12 col-sm-6">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
         <div class="card-content">
           <%= @service.description %>
@@ -10,37 +13,27 @@
         </div>
         <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
       </div>
-      <!-- CARD END -->
     </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-6">
-      <!-- TIME AND DESCRIPTION BEGINNING -->
-      <%= simple_form_for [@service, @booking] do |b| %>
-      <%= b.input :time, as: :date_time_picker, input_html:
-      { data:
-      {
-      date_format: "YYYY.MM.DD hh:mm A",
-      date_day_view_header_format: 'MMM YYYY',
-      date_side_by_side: true,
-      date_min_date: Time.current.strftime('%Y-%m-%d')
-      }
-      }%>
-      <!-- TIME AND DESCRIPTION END -->
-    </div>
-  </div>
-  <!-- MESSAGE BEGINNING -->
-  <div class="row"">
-    <div class="col-xs-12 col-sm-6 col-sm-6">
-      <%= b.label :description, 'Please enter a Message' %><br>
-      <%= b.text_field :description, size: 50%>
-      <!-- MESSAGE ENDING -->
-      <!-- BUTTON BEGINNING -->
-      <br>
-      <br>
-      <%= b.submit "Create Booking", class: "btn btn-primary" %>
-      <!-- BUTTON ENDING -->
-      <% end %>
+    <div class="col-xs-12 col-sm-6">
+      <div class="new-booking-description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptatem nostrum vel blanditiis explicabo, fugito?</p>
+          <%= simple_form_for [@service, @booking] do |b| %>
+            <%= b.input :time, as: :date_time_picker, input_html:
+            { data:{
+                date_format: "YYYY.MM.DD hh:mm A",
+                date_day_view_header_format: 'MMM YYYY',
+                date_side_by_side: true,
+                date_min_date: Time.current.strftime('%Y-%m-%d')
+              }}%>
+            <%= b.label :description, 'Please enter a Message' %><br>
+      </div>
     </div>
   </div>
 </div>
+<div class="space"></div>
+
+
+
+           <%= b.input :description, class: "form_control" %>
+            <%= b.submit "Create Booking", class: "btn btn-primary form-control" %>
+            <% end %>
