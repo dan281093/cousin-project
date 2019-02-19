@@ -18,17 +18,22 @@ users = [
   { name: 'Adam Black',
     email: 'Adam@test.com',
     password: '123456',
-    address: 'Tel Aviv' },
+    address: 'Tel Aviv',
+    remote_photo_url: "https://picsum.photos/200"
+  },
   {
     name: 'Eve Mendona',
     email: 'eve@test.com',
     password: '123456',
-    address: 'Tel Aviv' },
+    address: 'Tel Aviv' ,
+    remote_photo_url: 'https://picsum.photos/200'
+  },
   {
   name: 'Donald Trump',
   email: 'Don@test.com',
   password: '123456',
-  address: 'Tel Aviv'
+  address: 'Tel Aviv',
+  remote_photo_url: 'https://picsum.photos/200'
   }
 ]
 
