@@ -12,6 +12,7 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
+  margin: 20px;
 }
 
 .avatar {
@@ -22,3 +23,8 @@
 font-family: 'Source Sans Pro', sans-serif;
 }
 
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
