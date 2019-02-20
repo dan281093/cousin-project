@@ -1,33 +1,21 @@
 <div class="wrapper-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.8) 0%, rgba(0,36,61,0.4) 25%), url('<%= image_path 'newbackground.jpg' %>');">
- <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-          <h3 class="home">Find a mench to help you become a local.</h3>
-              <p class="home">Fill in the lines below to help narrow your search
-              </p>
-              <%= form_tag services_path, method: :get do %>
-                <%= text_field_tag :category,
-                params[:query],
-                class: "form-control",
-                placeholder: "Choose a category"
-                %>
-                <br>
-                <br>
-                <%= text_field_tag :description,
-                params[:query],
-                class: "form-control",
-                placeholder: "Choose a description"
-                %>
-                <%=  submit_tag "Search", class: "btn btn-primary"%>
-              <% end %>
-        <div>
-              <%= link_to "Show Me Everything", services_path, class: "btn btn-success" %>
-            </div>
-            </div>
-          </form>
-          </div>
-        </div>
+  <div class="center">
+    <h3>Find a Mench to help you become a local.</h3>
+  </div>
+  <div class="form-small">
+    <div class="center">
+      <%= form_tag services_path, method: :get do %>
+      <%= text_field_tag :category, params[:query], class: "form-control", placeholder: "Choose a category" %>
+      <br>
+      <%= text_field_tag :description, params[:query], class: "form-control", placeholder: "Choose a description" %>
+    </div>
+</div>
+  <div class="center">
+    <%=  submit_tag "Search", class: "btn btn-primary"%>
+    <%= link_to "Show Me Everything", services_path, class: "btn btn-success" %>
+    <% end %>
+  </div>
+  <div class="center">
+    <p>Getting help for small but meaningful things has never been this easy.</p>
   </div>
 </div>
-
-
