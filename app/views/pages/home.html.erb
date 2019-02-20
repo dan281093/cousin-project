@@ -23,8 +23,12 @@
               <label class="home" for="pwd">By Price:</label>
               <input type="integer" class="form-control" id="integer">
             </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+            <div>
+              <%= link_to "Submit", services_path, class: "btn btn-primary" %>
+            </div>
+            <div>
               <%= link_to "Show Me Everything", services_path, class: "btn btn-success" %>
+            </div>
             </div>
           </form>
           </div>

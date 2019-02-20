@@ -2,6 +2,9 @@ class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :destroy]
   def index
     @services = Service.all
+    #first get all the results with a category
+    #then filter for the ones where(location: 'location')
+     Service.search_by_category_and_description("#{params:query}")
   end
 
   def show
