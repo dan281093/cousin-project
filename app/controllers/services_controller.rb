@@ -1,10 +1,15 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :destroy]
   def index
-    @services = Service.all
     #first get all the results with a category
     #then filter for the ones where(location: 'location')
-     Service.search_by_category_and_description("#{params:query}")
+    if params[:category].present?
+      @services = Service.search_by_category_and_description("#{params[:category]}")
+    elsif params[:description].present?
+      @services = Service.search_by_category_and_description("#{params[:description]}")
+    else
+      @services = Service.all
+    end
   end
 
   def show
@@ -47,6 +52,6 @@ class ServicesController < ApplicationController
   end
 
   def services_params
-    params.require(:service).permit(:name, :description, :category, :price)
+    params.require(:service).permit(:name, :description, :category, :price, :query)
   end
 end
