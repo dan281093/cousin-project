@@ -1,0 +1,24 @@
+.wrapper-bookings {
+  width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+textarea  {
+  resize: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.make-booking {
+  font-family: $body-font;
+  text-align: left
+}
+
+.flex-body {
+  flex: 0 0 50%;
+  padding: 20px
+}
