@@ -1,0 +1,103 @@
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 30px;
+}
+
+.card-product img {
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-infos {
+  width: 100%;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+#status {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.btn-approve {
+  color: #1BCB7F;
+  border: 1px solid #1BCB7F;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 2px;
+}
+
+.btn-approve:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.btn-decline {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 5px;
+}
+
+.btn-decline:hover {
+  background: #878787;
+  opacity: 1;
+}
+
+.btn-delete {
+  color: #F7797F;
+  border: 1px solid #F7797F;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: #F7797F;
+}
+
+.bookings-center {
+  text-align: center;
+}

@@ -9,6 +9,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+
+  def update
+    @booking.update(booking_params)
+    redirect_to my_services_path
+  end
+  
   def show
     @booking = Booking.find(params[:id])
   end
@@ -39,6 +45,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:description, :time)
+    params.require(:booking).permit(:description, :time, :status)
   end
 end
