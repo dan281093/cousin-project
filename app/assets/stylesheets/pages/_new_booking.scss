@@ -1,4 +1,20 @@
-.middle {
-  align-content: center
+.wrapper-bookings {
+  margin: 0 auto;
 }
 
+.middle {
+  width: 300px;
+}
+
+.make-booking {
+  font-family: $body-font;
+  text-align: left
+}
+
+.make-booking-label {
+font-family: $body-font;
+}
+
+textarea  {
+  resize: none;
+}
