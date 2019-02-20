@@ -25,6 +25,13 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .search-bar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.category-search {
+  margin: 5px;
+}
+
+.description-search{
+  margin: 5px;
 }
