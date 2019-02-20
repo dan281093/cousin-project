@@ -36,7 +36,7 @@
 }
 
 .booking-banner-image {
-  background-image: url('https://source.unsplash.com/random');
+  background-image: url("<%= cl_image_path service.category %>");
   height: 40vh;
   flex-grow: 1;
   background-size: cover;
