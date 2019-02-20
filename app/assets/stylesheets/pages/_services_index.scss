@@ -2,7 +2,6 @@
   background-size: cover;
   background-position: center;
   height: 180px;
-  display: flex;
   justify-content: center;
   align-items: flex-end;
   color: white;
@@ -13,14 +12,28 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 10px;
   margin: 20px;
+
 }
 
-.avatar {
-  width: 40px;
+.avatar-card {
   border-radius: 50%;
+  height: 40px;
+  margin-left: 50px;
+
 }
 .card-content {
-font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+
+}
+
+.card-name {
+  // align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .search-bar {
