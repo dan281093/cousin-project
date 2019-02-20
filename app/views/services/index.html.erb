@@ -32,7 +32,9 @@
       <% @services.each do |service| %>
       <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 10px">
         <%= link_to service_path(service) do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path service.category %>')">
+
+
           <div class="card-content">
             <%= service.description %>
             <h3><%= service.name %></h3>
