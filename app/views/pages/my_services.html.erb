@@ -46,12 +46,21 @@
 
           <div class="bookings-center">
             <p id="status"><%= booking.status %></p>
-            <a class="btn btn-flat" href="#">Accept</a>
-            <a class="btn btn-ghost" href="#">Decline</a>
-          </div>
 
-      </div>
+          <%= form_for booking,  method: :patch do |f| %>
+          <%= f.hidden_field :status, :value => "Accepted" %>
+          <%= f.submit "Approve", class: "btn btn-approve" %>
+          <% end %>
+
+          <%= form_for booking,  method: :patch do |f| %>
+          <%= f.hidden_field :status, :value => "Declined" %>
+          <%= f.submit "Decline", class: "btn btn-decline" %>
+          <% end %>
+
+            </div>
+        </div>
     <% end %>
     <% end %>
 
+</div>
 </div>

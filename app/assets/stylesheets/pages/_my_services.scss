@@ -10,7 +10,6 @@
 }
 
 .card-product img {
-  height: 100%;
   width: 120px;
   object-fit: cover;
 }
@@ -48,21 +47,26 @@
 #status {
   font-size: 15px;
   font-weight: bold;
+  margin: 5px;
 }
 
-.btn-flat {
-  color: white;
+.btn-approve {
+  color: #1BCB7F;
+  border: 1px solid #1BCB7F;
   padding: 3px 18px;
-  border-radius: 4px;
-  background: #1EDD88;
-  transition: background 0.3s ease;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 2px;
 }
-.btn-flat:hover {
+
+.btn-approve:hover {
   background: #1BCB7F;
   color: white;
 }
 
-.btn-ghost {
+.btn-decline {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 3px 18px;
@@ -72,14 +76,15 @@
   transition: opacity 0.3s ease;
   margin: 5px;
 }
-.btn-ghost:hover {
+
+.btn-decline:hover {
   opacity: 1;
 }
 
 .btn-delete {
   color: #F7797F;
   border: 1px solid #F7797F;
-  padding: 8px 24px;
+  padding: 3px 18px;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
