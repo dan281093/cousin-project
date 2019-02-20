@@ -3,23 +3,19 @@
 <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
 <div class="container">
   <div class="row">
-    <h3>Your Bookings</h3>
     <div class="booking-banner">
       <div class="booking-banner-title">
         <div class="booking-banner-content">
-          <h2>Name : <%= @booking.service.name.capitalize %></h2>
+          <h3>Your Bookings</h3>
         </div>
       </div>
       <div class="booking-banner-image">
       </div>
     </div>
     <div class="description-booking">
-      <h3>Category :  </h3>
-      <p> <%= @booking.service.category %></p>
-      <h3>Description : </h3>
-      <p><%= @booking.service.description.capitalize %></p>
-      <h3>Price : </h3>
-      <p> <%= @booking.service.price %> $</p>
+      <h3 class="booking">Booking:  </h3>
+        <%= @booking.description%>
+
     </div>
     <div class="button-booking">
       <div class="all-button">
