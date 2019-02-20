@@ -36,11 +36,12 @@
 }
 
 .service-banner-image {
-  height: 40vh;
-  flex-grow: 1;
+  height: 240px;
+  width: 550px;
+  flex-shrink: 1;
+  margin-left: 50px;
   background-size: cover;
-  margin-left: 10px;
-  background-position: center;
+  background-position: right;
 }
 
 .service-banner-title {
