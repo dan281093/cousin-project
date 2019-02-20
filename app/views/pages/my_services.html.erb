@@ -1,4 +1,5 @@
-<div>
+<div class="dashboard-container">
+  <h4>The Services you Currently Offer</h4>
 
   <!-- MY SERVICES CARD -->
 
@@ -11,7 +12,46 @@
         <% end %>
         <p><%= service.description %></p>
       </div>
+      <div>
+        <a class="btn btn-delete" href="#">Delete</a>
+      </div>
     </div>
   <% end %>
+
+</div>
+
+<div class="dashboard-container">
+  <h4>Pending Booking Requests for your Services</h4>
+
+  <!-- MY BOOKINGS  -->
+
+    <% @services.each do |service| %>
+    <% service.bookings.each do |booking| %>
+      <div class="card-product">
+        <img src="https://source.unsplash.com/random">
+
+        <div class="card-product-infos">
+
+          <!-- CHANGE THIS LINK ONCE BOOKING SHOW IS READY -->
+
+          <%= link_to service_path(service) do %>
+
+          <!-- CHANGE THIS LINK ONCE BOOKING SHOW IS READY -->
+          <div>
+            <h2 class="align-left"><%=booking.service.name%></h2>
+            <% end %>
+            <p><%= booking.service.description %></p>
+          </div>
+        </div>
+
+          <div class="bookings-center">
+            <p id="status"><%= booking.status %></p>
+            <a class="btn btn-flat" href="#">Accept</a>
+            <a class="btn btn-ghost" href="#">Decline</a>
+          </div>
+
+      </div>
+    <% end %>
+    <% end %>
 
 </div>
