@@ -5,26 +5,24 @@
           <h3 class="home">Find a mench to help you become a local.</h3>
               <p class="home">Fill in the lines below to help narrow your search
               </p>
-          <form method="GET" action="service/index">
-            <div class="form-group">
-              <label class="home" for="city">By City:  </label>
-              <input type="text" class="form-control" id="text">
-            </div>
-            <div class="form-group">
-                <label class="home" for="category">By Category:
-                </label>
-                <input type="text" class="form-control" id="text">
-            </div>
-            <div class="form-group">
-                <label class="home" for="time">By Time:</label>
-                <input type="integer" class="form-control" id="integer">
-            </div>
-            <div class="form-group">
-              <label class="home" for="pwd">By Price:</label>
-              <input type="integer" class="form-control" id="integer">
-            </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <%= form_tag services_path, method: :get do %>
+                <%= text_field_tag :category,
+                params[:query],
+                class: "form-control",
+                placeholder: "Choose a category"
+                %>
+                <br>
+                <br>
+                <%= text_field_tag :description,
+                params[:query],
+                class: "form-control",
+                placeholder: "Choose a description"
+                %>
+                <%=  submit_tag "Search", class: "btn btn-primary"%>
+              <% end %>
+        <div>
               <%= link_to "Show Me Everything", services_path, class: "btn btn-success" %>
+            </div>
             </div>
           </form>
           </div>

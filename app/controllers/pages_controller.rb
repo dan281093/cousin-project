@@ -21,4 +21,10 @@ class PagesController < ApplicationController
   def my_profile
     @my_profile = current_user
   end
+
+  private
+
+  def set_params
+    params.require(:results).permit(:category)
+  end
 end
