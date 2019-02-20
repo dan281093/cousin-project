@@ -4,24 +4,22 @@
       <%= simple_form_for(@service) do |f| %>
       <%=f.error_notification  %>
 
-      <div class="form-group new-name">
+      <div class="form-group">
         <%= f.label "New Service Name" %>
         <%= f.input :name, label: false%>
       </div>
 
 
-      <div class="form-group new-description">
+      <div class="form-group">
         <%= f.label "New Service Description" %>
         <%= f.input :description, label: false%>
       </div>
-      <div class="form-group new-price">
+      <div class="form-group">
         <%= f.label "Set New Price" %>
         <%= f.input :price, label: false%>
       </div>
       <%= f.select :category, ["Government Departments", "Forms", "Trips", "Health and Diet", "Neighborhoods"] %>
       <%= f.submit class: 'btn btn-primary' %>
       <% end %>
-  </div>
-
+    </div>
 </div>
-

@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i" rel="stylesheet">
 </head>
 <body>
   <br>
@@ -8,39 +9,48 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-sm">
-        <input type="text" class="form-control" placeholder="City">
-      </div>
-      <div class="col-sm">
-        <input type="text" class="form-control" placeholder="Category">
-      </div>
-      <div class="col-sm">
-        <input type="text" class="form-control" placeholder="Time">
-      </div>
-      <div class="col-sm">
-        <input type="text" class="form-control" placeholder="Price Range">
-      </div>
-    </div>
-  </div>
-  <br>
-  <br>
-
-  <!-- cards -->
-  <div class="container">
-    <div class="row">
-      <% @services.each do |service| %>
-      <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 10px">
-        <%= link_to service_path(service) do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
-          <div class="card-content">
-            <%= service.description %>
-            <h3><%= service.name %></h3>
-          </div>
-          <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 search-bar">
+        <div class="category-search">
+          <%= form_tag services_path, method: :get do %>
+          <%= text_field_tag :category,
+          params[:query],
+          class: "form-control",
+          placeholder: "Choose a category"
+          %>
         </div>
-      <% end %>
+
+          <br>
+          <br>
+
+          <div class="description-search">
+            <%= text_field_tag :description,
+            params[:query],
+            class: "form-control",
+            placeholder: "Choose a description"
+            %>
+          </div>
+
+        <%=  submit_tag "Search", class: "btn btn-primary"%>
+        <% end %>
       </div>
-      <%end %>
-    </div>
-  </div>
-</body>
+      <br>
+      <br>
+      <!-- cards -->
+      <div class="container">
+        <div class="row">
+          <% @services.each do |service| %>
+          <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 10px">
+            <%= link_to service_path(service) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path service.category %>')">
+              <div class="card-content">
+                <%= service.description %>
+                <h3><%= service.name %></h3>
+              </div>
+              <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+            </div>
+            <% end %>
+          </div>
+          <%end %>
+        </div>
+      </div>
+    </body>

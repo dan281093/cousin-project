@@ -17,4 +17,14 @@ class PagesController < ApplicationController
   def my_bookings
     @my_bookings = current_user.bookings
   end
+
+  def my_profile
+    @my_profile = current_user
+  end
+
+  private
+
+  def set_params
+    params.require(:results).permit(:category)
+  end
 end
