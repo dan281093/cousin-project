@@ -1,7 +1,7 @@
 .body {
   background-color: white;
 }
-.description-service {
+.description-booking {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -14,28 +14,28 @@
 
 }
 
-.description-service h3 {
+.description-booking h3 {
   font-size: 16px;
   font-family: 'Merriweather', serif;
   color: grey;
 }
 
-.description-service p {
+.description-booking p {
   padding-top: 26px;
 }
 
-.service-banner-content h2{
+.booking-banner-content h2{
   color: grey;
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
 
-.service-banner {
+.booking-banner {
   display: flex;
   align-items: center;
 }
 
-.service-banner-image {
+.booking-banner-image {
   background-image: url('https://source.unsplash.com/random');
   height: 40vh;
   flex-grow: 1;
@@ -44,7 +44,7 @@
   background-position: center;
 }
 
-.service-banner-title {
+.booking-banner-title {
   background-color: #F6E6D4;
   flex: 0 0 400px;
   display: flex;
@@ -55,7 +55,15 @@
   color: #757780;
 }
 
-.button-service {
+.btn{
+  border-color: #F6E6D4;
+  padding-top: 5px;
+  margin-top: 8px;
+  margin: 8px;
+  color: #757780;
+}
+
+.button-booking {
   display: flex;
   justify-content: space-around;
 }
@@ -63,4 +71,9 @@
 .all-button:hover {
   border-color: #757780;
   color: #cd4545;
+}
+
+.booking {
+  display: flex;
+  text-align: left;
 }

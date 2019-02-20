@@ -11,3 +11,4 @@ class Service < ApplicationRecord
   CATEGORIES = ["Government Departments", "Forms", "Trips", "Health and Diet", "Neighborhoods"]
   validates_inclusion_of :category, in: CATEGORIES
 end
+

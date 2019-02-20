@@ -2,6 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
 <div class="container">
   <div class="row">
+    <h3>Your bookings</h3>
     <div class="service-banner">
       <div class="service-banner-title">
         <div class="service-banner-content">
@@ -12,10 +13,10 @@
       </div>
     </div>
     <div class="description-service">
-      <h3>Description : </h3>
-      <p><%= @service.description.capitalize %></p>
       <h3>Category :  </h3>
       <p> <%= @service.category %></p>
+      <h3>Description : </h3>
+      <p><%= @service.description.capitalize %></p>
       <h3>Price : </h3>
       <p> <%= @service.price %> $</p>
     </div>
@@ -23,8 +24,10 @@
       <div class="all-button">
         <%= link_to "Return to Menu", services_path, class:"btn btn-light"%>
         <%= link_to "Make Booking", new_service_booking_path(@service), class:"btn btn-light"%>
+        <% if current_user == @service.user %>
         <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-light"  %>
         <%= link_to "Edit", edit_service_path(@service), class: "btn btn-light" %>
+        <% end %>
       </div>
     </div>
   </div>
