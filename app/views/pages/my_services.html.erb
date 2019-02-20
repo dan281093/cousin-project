@@ -1,36 +1,66 @@
-<h2>The Services you Offer</h2>
-<div class="container">
-  <div class="row">
-    <% @my_services.each do |service| %>
-    <div class="col-xs-6 col-sm-6" style="padding: 10px">
-      <%= link_to service_path(service) do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
-        <div class="card-content">
-          <%= service.description %>
-          <h3><%= service.category %></h3>
-        </div>
-        <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+<div class="dashboard-container">
+  <h4>The Services you Currently Offer</h4>
+
+  <!-- MY SERVICES CARD -->
+
+  <% @my_services.each do |service| %>
+    <div class="card-product">
+      <img src="https://source.unsplash.com/random">
+      <div class="card-product-infos">
+        <%= link_to service_path(service) do %>
+          <h2 class="align-left"><%=service.name%></h2>
+        <% end %>
+        <p><%= service.description %></p>
       </div>
-      <% end %>
+      <div>
+        <a class="btn btn-delete" href="#">Delete</a>
+      </div>
     </div>
-    <%end %>
-  </div>
+  <% end %>
+
 </div>
-<h2>Pending Booking Requests for your Services</h2>
-<div class="container">
-  <div class="row">
+
+<div class="dashboard-container">
+  <h4>Pending Booking Requests for your Services</h4>
+
+  <!-- MY BOOKINGS  -->
+
     <% @services.each do |service| %>
     <% service.bookings.each do |booking| %>
-    <div class="col-xs-6 col-sm-6" style="padding: 10px">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/random')">
-        <div class="card-content">
-          <%= booking.description %>
-          <h3><%= booking.service.description %></h3>
+      <div class="card-product">
+        <img src="https://source.unsplash.com/random">
+
+        <div class="card-product-infos">
+
+          <!-- CHANGE THIS LINK ONCE BOOKING SHOW IS READY -->
+
+          <%= link_to service_path(service) do %>
+
+          <!-- CHANGE THIS LINK ONCE BOOKING SHOW IS READY -->
+          <div>
+            <h2 class="align-left"><%=booking.service.name%></h2>
+            <% end %>
+            <p><%= booking.service.description %></p>
+          </div>
         </div>
-        <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
-      </div>
-    </div>
+
+          <div class="bookings-center">
+            <p id="status"><%= booking.status %></p>
+
+          <%= form_for booking,  method: :patch do |f| %>
+          <%= f.hidden_field :status, :value => "Accepted" %>
+          <%= f.submit "Approve", class: "btn btn-approve" %>
+          <% end %>
+
+          <%= form_for booking,  method: :patch do |f| %>
+          <%= f.hidden_field :status, :value => "Declined" %>
+          <%= f.submit "Decline", class: "btn btn-decline" %>
+          <% end %>
+
+            </div>
+        </div>
     <% end %>
-    <%end %>
-  </div>
+    <% end %>
+
+</div>
 </div>
