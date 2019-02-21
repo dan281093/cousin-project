@@ -9,7 +9,7 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3 search-bar">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-8 search-bar">
         <div class="category-search">
           <%= form_tag services_path, method: :get do %>
           <%= text_field_tag :category,
@@ -41,12 +41,15 @@
           <% @services.each do |service| %>
           <div class="col-xs-12 col-sm-6 col-md-4" style="padding: 10px">
             <%= link_to service_path(service) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path service.category %>')">
-              <div class="card-content">
-                <%= service.description %>
+            <div class="card-category-service" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path service.category %>')">
+              <div class="card-name">
                 <h3><%= service.name %></h3>
+
               </div>
-              <img class="avatar" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+              <div class="card-content">
+                 <p> <%= service.description %></p>
+                <img class="avatar-card" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+              </div>
             </div>
             <% end %>
           </div>

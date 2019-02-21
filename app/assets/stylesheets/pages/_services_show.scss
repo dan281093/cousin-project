@@ -1,0 +1,98 @@
+.body {
+  background-color: white;
+}
+.description-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  padding: 25px;
+  color: #757780;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
+.description-service h3 {
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+  color: #1E75B9;
+}
+
+.description-service p {
+  padding-top: 26px;
+}
+
+.service-banner-content h2{
+  color: #1E75B9;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.service-banner-content p {
+  font-size: 30px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.service-banner-global {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-top: 25px;
+
+}
+
+.service-banner-image {
+  height: 240px;
+  width: 550px;
+  flex-shrink: 1;
+  margin-left: 50px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.service-banner-title {
+  flex: 0 0 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+  margin: 10px;
+  color: #757780;
+
+}
+
+.button-service-modify {
+  display: flex;
+  justify-content: space-around;
+  color: #1E75B9;
+  border: 1px solid #1E75B9;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 2px;
+  width: 15vw;
+  margin-left: 40%;
+}
+
+.button-service:hover {
+  background: #1BCB7F;
+  color: white;
+  width: 15vw;
+}
+
+.all-button-services {
+  width: 10px;
+  justify-content: space-between;
+  display: flex;
+  margin-left: 40%;
+}
