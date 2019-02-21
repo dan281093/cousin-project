@@ -1,11 +1,19 @@
 .form-new-service {
 display: flex;
 justify-content: center;
-font-family: 'Merriweather', serif;
-color: #757780;
+margin-top: 35px;
 }
 
 .service_description textarea {
   resize: none;
 }
 
+label{
+  font-weight: normal;
+}
+
+.validate-service {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
