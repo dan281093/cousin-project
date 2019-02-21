@@ -6,7 +6,7 @@
 
   <% @my_bookings.each do |booking| %>
     <div class="card-product">
-      <img src="https://source.unsplash.com/random">
+      <img src=<%= cl_image_path booking.service.category %>>
       <div class="card-product-infos">
         <%= link_to booking_path(booking) do %>
           <h2 class="align-left"><%=booking.service.name%></h2>
