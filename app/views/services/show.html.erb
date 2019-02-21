@@ -2,11 +2,11 @@
 <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
 <div class="container">
   <div class="row">
-    <h3>Your bookings</h3>
-    <div class="service-banner">
+    <div class="service-banner-global">
       <div class="service-banner-title">
         <div class="service-banner-content">
-          <h2>Name : <%= @service.name.capitalize %></h2>
+          <h2>Name : </h2>
+          <p><%= @service.name.capitalize %></p>
         </div>
       </div>
       <div class="service-banner-image">
@@ -20,13 +20,19 @@
       <h3>Price : </h3>
       <p> <%= @service.price %> $</p>
     </div>
-    <div class="button-service">
-      <div class="all-button">
-        <%= link_to "Return to Menu", services_path, class:"btn btn-light"%>
-        <%= link_to "Make Booking", new_service_booking_path(@service), class:"btn btn-light"%>
+    <div>
+      <div class="all-button-services">
+        <div class="button-service-modify">
+          <%= link_to "Return to Menu", services_path, class:"btn btn-light"%>
+        </div>
+        <div class="button-service-modify">
+          <%= link_to "Make Booking", new_service_booking_path(@service), class:"btn btn-light"%>
+        </div>
         <% if current_user == @service.user %>
-        <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-light"  %>
-        <%= link_to "Edit", edit_service_path(@service), class: "btn btn-light" %>
+        <div class="button-service-modify">
+          <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-light btn-delete"   %>
+          <%= link_to "Edit", edit_service_path(@service), class: "btn btn-light" %>
+        </div>
         <% end %>
       </div>
     </div>
