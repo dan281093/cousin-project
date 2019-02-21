@@ -47,7 +47,7 @@
           <div class="bookings-center">
             <p id="status"><%= booking.status %></p>
 
-          <%= form_for booking,  method: :patch do |f| %>
+          <%= form_for booking,  method: :patch, data: {confirm: "Are you sure"} do |f| %>
           <%= f.hidden_field :status, :value => "Accepted" %>
           <%= f.submit "Approve", class: "btn btn-approve" %>
           <% end %>
