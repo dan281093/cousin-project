@@ -20,5 +20,47 @@ textarea  {
 
 .flex-body {
   flex: 0 0 50%;
-  padding: 20px
+  padding: 10px;
+}
+
+.card-category-bookings {
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin: 20px;
+}
+
+.card-name-bookings {
+  // align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-content-bookings {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.booking-page {
+  text-align: left;
+  font-size: 18px;
+  color: #469AE0;
+  font-weight: normal;
+}
+
+.make-booking {
+  text-align: left;
+  font-size: 14px
 }

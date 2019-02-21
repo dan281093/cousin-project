@@ -3,16 +3,26 @@
 
     <!-- CARD -->
 
+            <div class="card-category-bookings" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @service.category %>')">
+              <div class="card-name-bookings">
+                <h3><%= @service.category %></h3>
+              </div>
+              <div class="card-content-bookings">
+                 <p> <%= @service.description %></p>
+                <img class="avatar-card" src='https://kitt.lewagon.com/placeholder/users/cveneziani'/>
+              </div>
+            </div>
+
 
 
   <!-- INFO -->
 
     <div class="flex-body">
-      <p><strong>Description:</strong></p>
+      <h2 class="booking-page">Description:</h2>
       <p class="make-booking"> <%= @service.description %></p>
-      <p><strong>Category:</strong></p>
+      <h2 class="booking-page">Category:</h2>
       <p class="make-booking"> <%= @service.category %></p>
-      <p><strong>Mench Name:</strong></p>
+      <h2 class="booking-page">Mench Name:</h2>
       <p class="make-booking"> <%= @service.user.name %></p>
     </div>
 
@@ -23,7 +33,7 @@
   <!-- TIME -->
 
     <%= simple_form_for [@service, @booking] do |b| %>
-    <%= b.input :time, label: "What time do you need the service?", label_html: { class: "make-booking-label" }, as: :date_time_picker, input_html:
+    <%= b.input :time, label: "What time do you need the service?", label_html: { class: "booking-page" }, as: :date_time_picker, input_html:
     { data:{
     date_format: "YYYY.MM.DD hh:mm A",
     date_day_view_header_format: 'MMM YYYY',
@@ -37,7 +47,7 @@
 
   <!-- MESSAGE -->
 
-    <%= b.input :description, label: "Send a Message to your Mench", input_html: { 'rows' => 5, 'cols' => 1 }, class: "form_control" %>
+    <%= b.input :description, label: "Send a Message to your Mench", input_html: { 'rows' => 5, 'cols' => 1 }, label_html: { class: "booking-page" }, class: "form_control" %>
     <%= b.submit "Create Booking", class: "btn btn-primary" %>
   </div>
   <% end %>
