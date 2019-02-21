@@ -6,7 +6,14 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
+  @picture = {
+  "Neighborhood" => "https://res.cloudinary.com/dzgpovo2n/image/upload/v1550666525/Neighborhoods.jpg",
+  "Trips" => "https://res.cloudinary.com/dzgpovo2n/image/upload/v1550666525/Trips.jpg",
+  "Government Departments" => "https://res.cloudinary.com/dzgpovo2n/image/upload/v1550666525/Government%20Departments.jpg",
+  "Health and Diet" => "https://res.cloudinary.com/dzgpovo2n/image/upload/v1550666524/Health%20and%20Diet.jpg",
+  "Forms" => "https://res.cloudinary.com/dzgpovo2n/image/upload/v1550666524/Forms.jpg"
+  }
+  @booking = Booking.new
   end
 
   def update

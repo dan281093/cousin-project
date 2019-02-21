@@ -14,6 +14,7 @@ puts "destroying all users!!!"
 ## clear old users
 User.destroy_all
 
+
 users = [
   { name: 'Adam Black',
     email: 'adam@test.com',

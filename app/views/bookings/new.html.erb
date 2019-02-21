@@ -4,7 +4,8 @@
     <!-- CARD -->
 
     <div class="flex-body">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dzgpovo2n/image/upload/v1550681414/alt.jpg')">
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @picture[@service.category] %>)">
         <div class="card-content">
           <%= @service.description %>
           <h3><%= @service.name %></h3>
