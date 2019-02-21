@@ -1,30 +1,33 @@
 
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet">
-<div class="container">
-  <div class="row">
-    <div class="booking-banner">
-      <div class="booking-banner-title">
-        <div class="booking-banner-content">
-          <h3>Your Bookings</h3>
+<div class="wrapper-bookings">
+  <div class="container">
+    <div class="row">
+      <div class="booking-banner">
+        <div class="booking-banner-title">
+          <div class="booking-banner-content">
+            <h3>Your Bookings</h3>
+          </div>
+        </div>
+        <div class="booking-banner-image">
+          <img class="booking-banner-image" src=" <%= cl_image_path @booking.service.category %> ">
         </div>
       </div>
-      <div class="booking-banner-image">
-      </div>
-    </div>
-    <div class="description-booking">
-      <h3 class="booking">Booking:  </h3>
-        <%= @booking.description%>
+      <div class="description-booking">
+        <h3 class="booking">Booking:  </h3>
+          <%= @booking.description%>
 
-    </div>
-    <div class="button-booking">
-      <div class="all-button">
-        <%= link_to "Return to Menu", booking_path, class:"btn btn-light"%>
-        <%= link_to "Make Booking", new_service_booking_path(@booking.service), class:"btn btn-light"%>
-        <% if current_user == @booking.user %>
-        <%= link_to "Delete this booking", booking_path(@booking), method: :delete , class: "btn btn-light"  %>
-        <%= link_to "Edit", edit_booking_path(@booking), class: "btn btn-light" %>
-        <% end %>
+      </div>
+      <div class="button-booking">
+        <div class="all-button">
+          <%= link_to "Return to Menu", booking_path, class:"btn btn-light"%>
+          <%= link_to "Make Booking", new_service_booking_path(@booking.service), class:"btn btn-light"%>
+          <% if current_user == @booking.user %>
+          <%= link_to "Delete this booking", booking_path(@booking), method: :delete , class: "btn btn-light"  %>
+          <%= link_to "Edit", edit_booking_path(@booking), class: "btn btn-light" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
