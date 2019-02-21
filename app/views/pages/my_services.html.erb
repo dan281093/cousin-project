@@ -28,7 +28,7 @@
     <% @services.each do |service| %>
     <% service.bookings.each do |booking| %>
       <div class="card-product">
-        <img src="https://source.unsplash.com/random">
+        <img src= <%= cl_image_path booking.service.category %>>
 
         <div class="card-product-infos">
 
