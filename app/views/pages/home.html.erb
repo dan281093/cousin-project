@@ -1,23 +1,23 @@
 <div class="wrapper-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.8) 0%, rgba(0,36,61,0.4) 25%), url('<%= image_path 'newbackground.jpg' %>');">
-  <div class="center">
-    <h3>Find a Mench to help you become a local.</h3>
-  </div>
-  <div class="form-small">
     <div class="center">
-      <%= form_tag services_path, method: :get do %>
-      <%= text_field_tag :category, params[:query], class: "form-control", placeholder: "Choose a category" %>
-      <br>
-      <%= text_field_tag :description, params[:query], class: "form-control", placeholder: "Choose a description" %>
+      <h3>Find a Mench to help you become a local.</h3>
     </div>
-</div>
-  <div class="center">
-    <%=  submit_tag "Search", class: "btn btn-primary"%>
-    <%= link_to "Show Me Everything", services_path, class: "btn btn-success" %>
-    <% end %>
-  </div>
-  <div class="center">
-    <p>Getting help for small but meaningful things has never been this easy.</p>
-  </div>
+    <div class="form-small">
+      <div class="center">
+        <%= form_tag services_path, method: :get do %>
+        <%= text_field_tag :category, params[:query], class: "form-control", placeholder: "Choose a category" %>
+        <br>
+        <%= text_field_tag :description, params[:query], class: "form-control", placeholder: "Choose a description" %>
+      </div>
+    </div>
+      <div class="center">
+      <%=  submit_tag "Search", class: "btn btn-primary"%>
+      <%= link_to "Show Me Everything", services_path, class: "btn btn-success" %>
+      <% end %>
+      </div>
+    <div class="center">
+      <p>Getting help for small but meaningful things has never been this easy.</p>
+    </div>
 </div>
 
 <div></div>
