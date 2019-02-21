@@ -1,7 +1,7 @@
 <% if @my_bookings.empty? %>
 <h2>Your Bookings Summary</h2>
-<h5> You don't have any bookings! </h5>
-<%= image_tag("mench.jpeg", size: "400") %>
+<h5> You don't have any bookings!</h5><br>
+<h5><%= image_tag("mench.jpeg", size: "400") %> </h5>
 <% else %>
 
   <% @my_bookings.each do |booking| %>
@@ -13,12 +13,15 @@
         <% end %>
         <p><%= booking.description %></p>
         <p>Your Mench is: <strong><%= booking.service.user.name %>!</strong></p>
-
       </div>
       <div>
-        <a class="btn btn-delete" href="#">Delete</a>
+        <%= link_to "Cancel", booking_path(booking), method: :delete , class: "btn btn-delete"  %>
+        <br><br>
+        <p class="approved"><%= booking.status %></p>
       </div>
     </div>
   <% end %>
   <% end %>
 </div>
+
+

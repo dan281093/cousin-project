@@ -101,3 +101,16 @@
 .bookings-center {
   text-align: center;
 }
+
+.approved {
+  color: #1BCB7F;
+  background: #1BCB7F;
+  border: 1px solid #1BCB7F;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 2px;
+  color: white;
+}
