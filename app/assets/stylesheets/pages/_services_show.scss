@@ -97,3 +97,23 @@
   display: flex;
   margin-left: 40%;
 }
+.button-service-delete {
+  color: #F7797F;
+  border: 1px solid #F7797F;
+  padding: 3px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.button-service-delete:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: #F7797F;
+
+}
+
+.button-danger{
+  color: #F7797F;
+}
