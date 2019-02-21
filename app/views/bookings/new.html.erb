@@ -3,7 +3,7 @@
 
     <!-- CARD -->
 
-            <div class="card-category-bookings" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @service.category %>')">
+            <div class="card-category-bookings" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @picture[@service.category] %>)">
               <div class="card-name-bookings">
                 <h3><%= @service.category %></h3>
               </div>
