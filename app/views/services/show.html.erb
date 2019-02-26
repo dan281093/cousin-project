@@ -31,10 +31,8 @@
         </div>
         <% if current_user == @service.user %>
         <div class="button-service-modify">
+          <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-light btn-delete"   %>
           <%= link_to "Edit", edit_service_path(@service), class: "btn btn-light" %>
-        </div>
-        <div class="button-service-delete">
-          <%= link_to "Delete this Service", service_path(@service), method: :delete , class: "btn btn-light button-danger"   %>
         </div>
         <% end %>
       </div>
